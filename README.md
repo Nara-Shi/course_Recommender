@@ -1,19 +1,40 @@
-# 💬 Chatbot template
+# Course Recommender
 
-A simple Streamlit app that shows how to build a chatbot using OpenAI's GPT-3.5.
+A small Streamlit prototype that recommends sample courses from a learner's selected topics, current level, and preferred maximum duration.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chatbot-template.streamlit.app/)
+## How it works
 
-### How to run it on your own machine
+- Select one or more interests.
+- Filter by beginner, intermediate, advanced, or any level.
+- Set a maximum course duration.
+- Review the ranked matches and the topics that caused each match.
 
-1. Install the requirements
+Recommendations use a simple, explainable topic-overlap score against the sample catalog in `streamlit_app.py`. The project does not call an AI API and does not collect or store learner data.
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+> The catalog is illustrative sample content. This prototype does not represent real course providers, enrollment, or verified course availability.
 
-2. Run the app
+## Run locally
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+Requires Python 3.10 or later.
+
+```bash
+python -m venv .venv
+```
+
+Activate the virtual environment, then install and run:
+
+```bash
+python -m pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
+
+Open the local URL printed by Streamlit.
+
+## Project files
+
+- `streamlit_app.py` — interface, sample catalog, and matching logic.
+- `requirements.txt` — Python application dependency.
+
+## License
+
+See [LICENSE](LICENSE).
